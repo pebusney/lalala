@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>helloworld</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.hi-i-am-a-class{
+			font-size:25px;
+		}
+		#wow{
+			color: red;
+		}
+		.lalala{
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+<div class="hi-i-am-a-class">嗯,这个字会变得很大，因为我设置了字体大小呃。。。没有设置编码格式,y要设置成utf-8，我百度下，忘记了</div>
+<p>在chrome里打开控制台，按F12，f5刷新</p>
+<a href="tel://13764755980">打开一个连接</a>
+<span id="wow">css这样写的= =，一个类名class="hi-i-am-a-class"，然后在style标签中间写样式。如果是class用英文的点表示，就是这个.，如果是id用英文的井号表示，就是#,我设置了这个id为wow的span标签的字体颜色为红色~</span>
+<ul>可以在chrome的控制台中对样式进行查看和修改~</ul>
+<strong>前端程序猿没事的时候都会打开F12看网站的代码的，有时候还能看到招聘信息哦~~~我给你看下</strong>
+<div>div就是用的最多的标签，不过现在的html5的很多新标签可以完全取代他了</div>
+<span>喝</span>
+<button id="thisIsABtn">我是一个按钮（降低耦合度）(驼峰命名法)</button>
+<div class="lalala">CopyRight 2014 小径分岔的花园  |  Code By Younger</div>
+</body>
+<script type="text/javascript">
+	// underfined,null,number,boolean,object
+	
+	var is = function(obj) {
+		return Object.prototype.toString.call(obj).slice(8, -1);
+	};
+	var obj = document.getElementById('thisIsABtn');
+	obj.onclick = function(){
+
+	};
+	is(1);
+</script>
+</html>
