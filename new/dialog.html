@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dialog</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+		}
+		.content{
+			height: 1000px;
+			background-color: green;
+		}
+		.hide{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0.5;
+			filter: alpha(opacity=50);
+			z-index: 2;
+			background-color: #ccc;
+			display: none;
+		}
+		.dialog{
+			background-color: white;
+			position: absolute;
+			width: 60%;
+			height: 300px;
+			margin:0 20%;
+			top: 20%;
+			border: 1px #eee solid;
+			border-radius: 5px;
+			display: none;
+			z-index: 3;
+		}
+		.dialog-title{
+			border-bottom: 1px #eee solid;
+			padding: 10px;
+			text-align: center;
+			font-size: 24px;
+			line-height: 30px;
+		}
+		.dialog-text{
+			padding: 10px;
+			line-height: 28px;
+			color: #aaa;
+		}
+		.dialog-close{
+			float: right;
+			display: inline-block;
+			font-size: 28px;
+			color: white;
+			line-height: 40px;
+			width: 40px;
+			height: 40px;
+			border-radius: 20px;
+			background-color: rgb(229, 53, 53);
+		}
+	</style>
+</head>
+<body>
+<div id="hide" class="hide"></div>
+<div id="dialog" class="dialog">
+	<div class="dialog-title">我就是传说中的标题<span id="dialog-close" class="dialog-close">X</span></div>
+	<div class="dialog-text">我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容我就是内容</div>
+</div>
+<div class="content">
+	<a id="showDialog">点击我</a>
+</div>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$('#showDialog').on('click', function() {
+		$('#dialog').show(200);
+		$('#hide').show();
+	});
+	$('#dialog-close').on('click', function() {
+		$('#dialog').hide(200);
+		$('#hide').hide();
+	});
+</script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	// 直接创建 var xxx = {};
+	var zhijie = {
+		name : 'younger',
+		method : function() {
+			console.log('yoo');
+		}
+	};
+
+	// zhijie.method();
+	//通过函数创建对象 var xxx = function() {return obj}
+	var func = function(name) {
+		var obj = {};
+		obj.name = name;
+		obj.method = function() {
+			console.log('create by function');
+		};
+		return obj;
+	};
+	// var byFun = func('younger');
+	// var byFun1 = func('older');
+	// console.log(byFun.name);
+	// byFun.method();
+	// console.log(byFun1.name);
+
+	// 通过构造函数的方式创建
+
+	// public class Younger{
+		// private void hehe(str) {
+		// 	System.out.println(str);
+		// };
+	// 	public Younger(name) {
+	// 		this.name = name;
+	// 		this.method = hehe();
+	// 	}
+	// 	public static void main() {
+	// 		Younger obj = new Younger('younger');
+	//		obj.method();
+	// 		System.out.println(obj.name);
+	// 	}
+	// }
+
+
+
+	var create = function(name) {
+		this.name = name;
+		this.method = function() {
+			console.log('create by gouzao');
+		};
+	};
+
+	var createObj = new create('younger');
+	createObj.method();
+	console.log(createObj.name);
+
+</script>
+</html>
